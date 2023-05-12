@@ -1,7 +1,7 @@
 const App = () => {
   return (
     <>
-      <h1>BBTAG最高のゲーム</h1>
+      <h1 className='text-blue-900'>BBTAG最高のゲーム</h1>
     </>
   );
 };
