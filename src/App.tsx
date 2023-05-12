@@ -1,3 +1,5 @@
+import { Button } from './components/button';
+
 const App = () => {
   return (
     <>
@@ -7,9 +9,16 @@ const App = () => {
         <h5 className='mb-12 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>セトヒルダ</h5>
 
         <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>214PA</p>
-        <button className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
-          終わっとる
-        </button>
+        <Button>おわっとるが</Button>
+        <Button
+          onClick={() => {
+            alert('じゃない');
+          }}
+        >
+          可愛いだけ
+        </Button>
+        <Button>punpun</Button>
+        <Button>バイバイ！</Button>
       </div>
     </>
   );
