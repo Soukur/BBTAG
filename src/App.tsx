@@ -26,14 +26,22 @@ const App = () => {
                 TEAMPOWER
                 <Button
                   onClick={() => {
-                    setTeamPower((num) => num + 1);
+                    if (teamPower < 20) {
+                      setTeamPower((num) => num + 1);
+                    } else {
+                      setTeamPower((num) => num + 0);
+                    }
                   }}
                 >
                   +
                 </Button>
                 <Button
                   onClick={() => {
-                    setTeamPower((num) => num - 1);
+                    if (teamPower > 0) {
+                      setTeamPower((num) => num - 1);
+                    } else {
+                      setTeamPower((num) => num - 0);
+                    }
                   }}
                 >
                   -
