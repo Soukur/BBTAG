@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Slider } from '@material-tailwind/react';
 import { Button } from './components/button';
 import bgImage from './images/bg.jpg';
 
@@ -46,6 +47,7 @@ const App = () => {
                 >
                   -
                 </Button>
+                <Slider size='md' defaultValue={50} />
                 <div>{teamPower}</div>
               </div>
             </div>
