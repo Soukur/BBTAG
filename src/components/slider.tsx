@@ -3,15 +3,13 @@ import { Button } from './button';
 
 interface SliderProps {
   title?: string;
-  initialValue?: number;
-  value?: number;
+  value: number;
+  setValue: React.Dispatch<React.SetStateAction<number>>;
   min?: number;
   max?: number;
 }
 
-export const Slider = ({ title = '', initialValue = 50, min = 0, max = 100 }: SliderProps) => {
-  const [value, setValue] = React.useState<number>(initialValue);
-
+export const Slider = ({ title = '', value, setValue, min = 0, max = 100 }: SliderProps) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(Number(event.target.value));
   };

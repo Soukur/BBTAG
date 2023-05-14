@@ -3,12 +3,12 @@ import { Slider } from './components/slider';
 import bgImage from './images/bg/bg.jpg';
 
 const App = () => {
-  const [teamPowerValue] = React.useState<number>(50);
-  const [aveDmageValue] = React.useState<number>(50);
-  const [maxDamageValue] = React.useState<number>(50);
-  const [defenceValue] = React.useState<number>(50);
-  const [tacticsValue] = React.useState<number>(50);
-  const [mixupOkiValue] = React.useState<number>(50);
+  const [teamPowerValue, setTeamPowerValue] = React.useState<number>(50);
+  const [aveDmageValue, setAveDmageValue] = React.useState<number>(50);
+  const [maxDamageValue, setMaxDamageValue] = React.useState<number>(50);
+  const [defenceValue, setDefenceValue] = React.useState<number>(50);
+  const [tacticsValue, setTacticsValue] = React.useState<number>(50);
+  const [mixupOkiValue, setMixupOkiValue] = React.useState<number>(50);
 
   const backgroundImageStyle = {
     backgroundImage: `url("${bgImage}")`,
@@ -28,12 +28,12 @@ const App = () => {
 
           <div className='p-2 flex-1  border-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700'>
             <div className='flex flex-col  '>
-              <Slider title='TEAMPOWER' min={0} max={100} initialValue={teamPowerValue} value={teamPowerValue} />
-              <Slider title='AVE DAMAGE' min={0} max={100} initialValue={aveDmageValue} value={aveDmageValue} />
-              <Slider title='MAX DAMAGE' min={0} max={100} initialValue={maxDamageValue} value={maxDamageValue} />
-              <Slider title='DEFENCE' min={0} max={100} initialValue={defenceValue} value={defenceValue} />
-              <Slider title='TACTICS' min={0} max={100} initialValue={tacticsValue} value={tacticsValue} />
-              <Slider title='MIXUP&OKI' min={0} max={100} initialValue={mixupOkiValue} value={mixupOkiValue} />
+              <Slider title='TEAMPOWER' value={teamPowerValue} setValue={setTeamPowerValue} />
+              <Slider title='AVE DAMAGE' value={aveDmageValue} setValue={setAveDmageValue} />
+              <Slider title='MAX DAMAGE' value={maxDamageValue} setValue={setMaxDamageValue} />
+              <Slider title='DEFENCE' value={defenceValue} setValue={setDefenceValue} />
+              <Slider title='TACTICS' value={tacticsValue} setValue={setTacticsValue} />
+              <Slider title='MIXUP&OKI' value={mixupOkiValue} setValue={setMixupOkiValue} />
             </div>
           </div>
         </div>
