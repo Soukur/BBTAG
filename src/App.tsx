@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Slider } from './components/slider';
 import bgImage from './images/bg/bg.jpg';
 import { CharaImage } from './components/charaImage';
+import { CharaSelect } from './components/charaSelect';
+import { images } from './data';
 
 const App = () => {
   const [teamPowerValue, setTeamPowerValue] = React.useState<number>(50);
@@ -10,6 +12,8 @@ const App = () => {
   const [defenceValue, setDefenceValue] = React.useState<number>(50);
   const [tacticsValue, setTacticsValue] = React.useState<number>(50);
   const [mixupOkiValue, setMixupOkiValue] = React.useState<number>(50);
+  const [chara1, setChara1] = React.useState<keyof typeof images>('seth');
+  const [chara2, setChara2] = React.useState<keyof typeof images>('hilda');
 
   const backgroundImageStyle = {
     backgroundImage: `url("${bgImage}")`,
@@ -26,8 +30,10 @@ const App = () => {
 
         <div className='flex flex-row h-auto'>
           <div className='p-2 flex-1  border-2 border-green-500'>
-            <CharaImage charaName='adachi' />
-            <CharaImage charaName='seth' />
+            <CharaSelect value={chara1} setValue={setChara1} />
+            <CharaSelect value={chara2} setValue={setChara2} />
+            <CharaImage charaName={chara1} />
+            <CharaImage charaName={chara2} />
           </div>
 
           <div className='p-2 flex-1  border-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700'>
