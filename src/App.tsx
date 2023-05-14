@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Slider } from './components/slider';
 import bgImage from './images/bg/bg.jpg';
+import { CharaImage } from './components/charaImage';
 
 const App = () => {
   const [teamPowerValue, setTeamPowerValue] = React.useState<number>(50);
@@ -24,7 +25,10 @@ const App = () => {
         </h1>
 
         <div className='flex flex-row h-auto'>
-          <div className='p-2 flex-1  border-2 border-green-500'>LEFT</div>
+          <div className='p-2 flex-1  border-2 border-green-500'>
+            <CharaImage charaName='adachi' />
+            <CharaImage charaName='seth' />
+          </div>
 
           <div className='p-2 flex-1  border-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700'>
             <div className='flex flex-col  '>
