@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Button } from './button';
 
 interface SliderProps {
   title?: string;
@@ -17,9 +18,33 @@ export const Slider = ({ title = '', initialValue = 50, min = 0, max = 100 }: Sl
 
   return (
     <div>
-      <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>{title}</h1>
+      <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+        {title}
+        <Button
+          onClick={() => {
+            if (value < 100) {
+              setValue((num) => num + 1);
+            } else {
+              setValue((num) => num + 0);
+            }
+          }}
+        >
+          +
+        </Button>
+        <Button
+          onClick={() => {
+            if (value > 0) {
+              setValue((num) => num - 1);
+            } else {
+              setValue((num) => num - 0);
+            }
+          }}
+        >
+          -
+        </Button>
+      </h1>
       <input className='w-full' type='range' min={min} max={max} value={value} onChange={handleChange} />
-      <p className='mb-12 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
+      <p className='mb-12 text-2xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
     </div>
   );
 };
