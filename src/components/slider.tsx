@@ -18,7 +18,7 @@ export const Slider = ({ title = '', initialValue = 50, min = 0, max = 100 }: Sl
 
   return (
     <div>
-      <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+      <h1 className='text-xl font-bold tracking-tight text-gray-900 dark:text-white'>
         {title}
         <Button
           onClick={() => {
@@ -44,7 +44,7 @@ export const Slider = ({ title = '', initialValue = 50, min = 0, max = 100 }: Sl
         </Button>
       </h1>
       <input className='w-full' type='range' min={min} max={max} value={value} onChange={handleChange} />
-      <p className='mb-12 text-2xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
+      <p className='mb-6 text-xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
     </div>
   );
 };
