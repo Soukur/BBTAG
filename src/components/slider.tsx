@@ -41,8 +41,15 @@ export const Slider = ({ title = '', value, setValue, min = 0, max = 100 }: Slid
           -
         </Button>
       </h1>
-      <input className='w-full' type='range' min={min} max={max} value={value} onChange={handleChange} />
-      <p className='mb-6 text-xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
+      <input
+        className='w-full  cursor-pointer rounded-lg appearance-non'
+        type='range'
+        min={min}
+        max={max}
+        value={value}
+        onChange={handleChange}
+      />
+      <p className='mb-2 text-xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
     </div>
   );
 };

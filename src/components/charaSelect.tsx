@@ -28,10 +28,10 @@ export const CharaSelect = ({ value, setValue }: CharaSelectProps) => {
             <ChevronUpIcon />
           </Select.ScrollUpButton>
           <Select.Viewport>
-            <SelectItem value='seth'>セト</SelectItem>
-            <SelectItem value='hilda'>ヒルダ</SelectItem>
-            <SelectItem value='adachi'>足立</SelectItem>
-            <SelectItem value='yu'>番長</SelectItem>
+            <SelectItem value='adachi'>Adachi</SelectItem>
+            <SelectItem value='seth'>Seth</SelectItem>
+            <SelectItem value='yu'>Yu</SelectItem>
+            <SelectItem value='hilda'>Hilda</SelectItem>
           </Select.Viewport>
           <Select.ScrollDownButton>
             <ChevronDownIcon />
