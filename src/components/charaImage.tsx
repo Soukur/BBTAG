@@ -5,5 +5,5 @@ interface CharaImageProps {
 }
 
 export const CharaImage = ({ charaName }: CharaImageProps) => {
-  return <img src={images[charaName]} />;
+  return <img style={{ width: '50%', height: '50%' }} src={images[charaName]} />;
 };

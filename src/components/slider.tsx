@@ -49,7 +49,7 @@ export const Slider = ({ title = '', value, setValue, min = 0, max = 100 }: Slid
         value={value}
         onChange={handleChange}
       />
-      <p className='mb-2 text-xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
+      <p className='mb-1 text-xl text-right font-bold tracking-tight text-gray-900 dark:text-white'>{value} point</p>
     </div>
   );
 };
