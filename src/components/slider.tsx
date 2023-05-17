@@ -20,17 +20,6 @@ export const Slider = ({ title = '', value, setValue, min = 0, max = 100 }: Slid
         {title}
         <Button
           onClick={() => {
-            if (value < 100) {
-              setValue((num) => num + 1);
-            } else {
-              setValue((num) => num + 0);
-            }
-          }}
-        >
-          +
-        </Button>
-        <Button
-          onClick={() => {
             if (value > 0) {
               setValue((num) => num - 1);
             } else {
@@ -38,7 +27,18 @@ export const Slider = ({ title = '', value, setValue, min = 0, max = 100 }: Slid
             }
           }}
         >
-          -
+          -1
+        </Button>
+        <Button
+          onClick={() => {
+            if (value < 100) {
+              setValue((num) => num + 1);
+            } else {
+              setValue((num) => num + 0);
+            }
+          }}
+        >
+          +1
         </Button>
       </h1>
       <input
