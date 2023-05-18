@@ -19,7 +19,7 @@ const App = () => {
     <div className='App '>
       <div className='bg-[url("./images/bg/bg.jpg")] bg-opacity-30 bg-cover bg-center  min-w-screen min-h-screen p-2 md:p-6'>
         <h1 className='p-9 gap-2 border-b-2 text-3xl flex justify-center items-center font-bold text-black '>
-          BBTAG TEAM RATING
+          BBTAG TEAM SCORE
         </h1>
 
         <div className='flex flex-col md:flex-row h-auto'>
@@ -48,13 +48,16 @@ const App = () => {
         <div className='flex justify-center p-5'>
           <TwitterShareButton
             url='https://soukur.github.io/BBTAG/'
-            title={`${chara1}+${chara2}
+            title={`${chara1.charAt(0).toUpperCase()}${chara1.slice(1)}+${chara2.charAt(0).toUpperCase()}${chara2.slice(
+              1
+            )}
 TeamPower:${teamPowerValue}
 AveDamage:${aveDamageValue}
 MaxDamage:${maxDamageValue}
 Defence:${defenceValue}
 Tactics:${tacticsValue}
 Mixup&Oki:${mixupOkiValue}`}
+            hashtags={['BBTAG', 'BBTAG_TEAM_SCORE']}
           >
             <TwitterIcon size={32} round />
           </TwitterShareButton>
