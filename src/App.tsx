@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { TwitterShareButton, TwitterIcon } from 'react-share';
 import { Slider } from './components/slider';
 import { CharaImage } from './components/charaImage';
 import { CharaSelect } from './components/charaSelect';
@@ -6,7 +7,7 @@ import { images } from './data';
 
 const App = () => {
   const [teamPowerValue, setTeamPowerValue] = React.useState<number>(50);
-  const [aveDmageValue, setAveDmageValue] = React.useState<number>(50);
+  const [aveDamageValue, setAveDmageValue] = React.useState<number>(50);
   const [maxDamageValue, setMaxDamageValue] = React.useState<number>(50);
   const [defenceValue, setDefenceValue] = React.useState<number>(50);
   const [tacticsValue, setTacticsValue] = React.useState<number>(50);
@@ -36,13 +37,27 @@ const App = () => {
           <div className='bg-gray-400 bg-opacity-70  rounded-xl p-6  flex-1  border-2 border-gray-200 dark:bg-gray-800 dark:border-gray-700'>
             <div className='flex flex-col '>
               <Slider title='TEAMPOWER' value={teamPowerValue} setValue={setTeamPowerValue} />
-              <Slider title='AVE DAMAGE' value={aveDmageValue} setValue={setAveDmageValue} />
+              <Slider title='AVE DAMAGE' value={aveDamageValue} setValue={setAveDmageValue} />
               <Slider title='MAX DAMAGE' value={maxDamageValue} setValue={setMaxDamageValue} />
               <Slider title='DEFENCE' value={defenceValue} setValue={setDefenceValue} />
               <Slider title='TACTICS' value={tacticsValue} setValue={setTacticsValue} />
               <Slider title='MIXUP&OKI' value={mixupOkiValue} setValue={setMixupOkiValue} />
             </div>
           </div>
+        </div>
+        <div className='flex justify-center p-5'>
+          <TwitterShareButton
+            url='https://soukur.github.io/BBTAG/'
+            title={`${chara1}+${chara2}
+TeamPower:${teamPowerValue}
+AveDamage:${aveDamageValue}
+MaxDamage:${maxDamageValue}
+Defence:${defenceValue}
+Tactics:${tacticsValue}
+Mixup&Oki:${mixupOkiValue}`}
+          >
+            <TwitterIcon size={32} round />
+          </TwitterShareButton>
         </div>
       </div>
     </div>
