@@ -24,7 +24,7 @@ export const CharaSelect = ({ value, setValue }: CharaSelectProps) => {
       </Select.Trigger>
       <Select.Portal>
         <Select.Content className='overflow-hidden bg-white rounded-md py-3'>
-          <Select.ScrollUpButton>
+          <Select.ScrollUpButton className='flex items-center justify-center'>
             <ChevronUpIcon />
           </Select.ScrollUpButton>
           <Select.Viewport>
@@ -80,7 +80,7 @@ export const CharaSelect = ({ value, setValue }: CharaSelectProps) => {
             <SelectItem value='yumi'>Yumi</SelectItem>
             <SelectItem value='yuzuriha'>Yuzuriha</SelectItem>
           </Select.Viewport>
-          <Select.ScrollDownButton>
+          <Select.ScrollDownButton className='flex items-center justify-center'>
             <ChevronDownIcon />
           </Select.ScrollDownButton>
         </Select.Content>
