@@ -16,14 +16,14 @@ const App = () => {
 
   return (
     <div className='App '>
-      <div className='bg-[url("./images/bg/bg.jpg")] bg-opacity-30 bg-cover bg-center  min-w-screen min-h-screen p-6'>
+      <div className='bg-[url("./images/bg/bg.jpg")] bg-opacity-30 bg-cover bg-center  min-w-screen min-h-screen p-2 md:p-6'>
         <h1 className='p-9 gap-2 border-b-2 text-3xl flex justify-center items-center font-bold text-black '>
           BBTAG TEAM RATING
         </h1>
 
-        <div className='flex flex-row h-auto'>
+        <div className='flex flex-col md:flex-row h-auto'>
           <div className='p-2 py-2  flex-1 '>
-            <div className='flex justify-between pt-32'>
+            <div className='flex justify-between md:pt-32'>
               <CharaImage charaName={chara1} />
               <CharaImage charaName={chara2} />
             </div>
