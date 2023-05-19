@@ -47,7 +47,7 @@ import waldsteinImage from './images/character/waldstein.png';
 import weissImage from './images/character/weiss.png';
 import yangImage from './images/character/yang.png';
 import yosukeImage from './images/character/yosuke.png';
-import yuImage from './images/character/seth.png';
+import yuImage from './images/character/yu.png';
 import yukikoImage from './images/character/yukiko.png';
 import yumiImage from './images/character/yumi.png';
 import yuzurihaImage from './images/character/yuzuriha.png';
